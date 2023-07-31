@@ -5,7 +5,7 @@ pipeline {
         TOMCAT_URL = "http://15.206.210.193:8080"
         TOMCAT_USER = "admin"
         TOMCAT_PASSWORD = "admin"
-        REPO_URL = "https://github.com/bprasad701/onlinebookstore.git"
+        REPO_URL = "https://github.com/bprasad701/App-Deploy.git"
     }
 
     stages {
