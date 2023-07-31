@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage("git_checkout") {
             steps {
-                git branch: '*/J2EE', credentialsId: 'githubloginID', url: "${REPO_URL}"
+                git branch: 'main', credentialsId: 'githubloginID', url: "${REPO_URL}"
                 echo "Repo cloned successfully"
             }
         }
