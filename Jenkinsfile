@@ -31,7 +31,7 @@ pipeline {
         stage('Deploy to Tomcat') {
             steps {
                 // This step will deploy the generated artifact (e.g., WAR file) to Tomcat
-                sh "curl -T /home/ec2-user/Jenkins/workspace/demo/target/onlinebookstore-0.0.1-SNAPSHOT.war ${env.TOMCAT_URL}/manager/text/deploy?path=/obs&update=true" 
+                sh "curl -T /home/ec2-user/Jenkins/workspace/demo/target/onlinebookstore-0.0.1-SNAPSHOT.war ${env.TOMCAT_URL}/obs" 
                 // Replace "/your-app-name" with the context path under which you want to deploy the app in Tomcat.
                 // Note that the "/manager/text" endpoint requires proper Tomcat Manager credentials, which we will set up later.
             }
