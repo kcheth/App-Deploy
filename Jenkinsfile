@@ -2,16 +2,16 @@ pipeline {
     agent any
     environment {
         // Customize these variables based on your setup
-        TOMCAT_URL = "http://15.206.210.193:8080"
+        TOMCAT_URL = "http://13.233.232.58:8080"
         TOMCAT_USER = "admin"
         TOMCAT_PASSWORD = "admin"
-        REPO_URL = "https://github.com/bprasad701/App-Deploy.git"
+        REPO_URL = "https://github.com/kcheth/App-Deploy.git"
     }
 
     stages {
         stage("git_checkout") {
             steps {
-                git branch: 'main', credentialsId: 'githubloginID', url: "${REPO_URL}"
+                git branch: 'main', credentialsId: 'github-login', url: "${REPO_URL}"
                 echo "Repo cloned successfully"
             }
         }
